@@ -7,7 +7,7 @@
 TwoComp_Volume_Clearance_HalfLife(V1,Cl1,t_alpha,t_beta,
  V1.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,
  t_beta.sd=NA,covar=c(V1Cl1=NA,V1talpha=NA,V1tbeta=NA,Cl1talpha=NA,
-   Cl1tbeta=NA,talphatbeta=NA))
+   Cl1tbeta=NA,talphatbeta=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -39,5 +39,5 @@ TwoComp_Volume_Clearance_HalfLife(V1=5,Cl1=3.5,t_alpha=0.568,t_beta=24.2,
 V1.sd=0.01,Cl1.sd=0.01,t_alpha.sd=0.002,t_beta.sd=0.5)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

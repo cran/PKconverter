@@ -4,7 +4,8 @@
 \alias{OneComp_Volume_Clearance}
 \title{Convert pharmacokinetic parameters for one compartment model}
 \usage{
-OneComp_Volume_Clearance(V1,Cl1,V1.sd=NA,Cl1.sd=NA,covar=c(V1Cl1=NA))
+OneComp_Volume_Clearance(V1,Cl1,V1.sd=NA,Cl1.sd=NA,
+        covar=c(V1Cl1=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -27,7 +28,7 @@ clearance (Cl1)
 OneComp_Volume_Clearance(V1=8,Cl1=4,V1.sd=0.01,Cl1.sd=0.01)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 
 Gabrielsson and Weiner(2006) Pharmacokinetic and
             Pharmacodynamic Data Analysis: Concepts and Applications,

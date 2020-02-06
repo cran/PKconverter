@@ -5,7 +5,7 @@
 #' @usage TwoComp_Volume_Clearance(V1,V2,Cl1,Cl2,
 #'                   V1.sd=NA,V2.sd=NA,Cl1.sd=NA,Cl2.sd=NA,
 #'                   covar=c(V1V2=0,V1Cl1=0,V1Cl2=0,
-#'                     V2Cl1=0,V2Cl2=0,Cl1Cl2=0))
+#'                     V2Cl1=0,V2Cl2=0,Cl1Cl2=0),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param V2 The volume of distribution of compartment 2
 #' @param Cl1 Clearance from compartment 1
@@ -16,7 +16,7 @@
 #' @param Cl2.sd standard error of Cl2
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' TwoComp_Volume_Clearance(V1=5,V2=50,Cl1=3.5,Cl2=2.5,
@@ -25,7 +25,7 @@
 TwoComp_Volume_Clearance<-function(V1,V2,Cl1,Cl2,
                    V1.sd=NA,V2.sd=NA,Cl1.sd=NA,Cl2.sd=NA,
                    covar=c(V1V2=0,V1Cl1=0,V1Cl2=0,
-                     V2Cl1=0,V2Cl2=0,Cl1Cl2=0)){
+                     V2Cl1=0,V2Cl2=0,Cl1Cl2=0),...){
   if(is.na(covar[1])) covar<-rep(0,6)
   Vdss <- V1+V2
   V1.var <- (V1.sd)^2;    V2.var <- (V2.sd)^2

@@ -3,20 +3,20 @@
 #' Calculate pharmacokinetic parameters with volume of distribution(V1) and
 #' parameter (alpha) in the model "Aexp(-alpha)"
 #' @usage OneComp_Volume_Exponent(V1,alpha,V1.sd=NA,alpha.sd=NA,
-#'          covar=c(V1alpha=NA))
+#'          covar=c(V1alpha=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param alpha parameter in one compartment model "Aexp(-alpha)"
 #' @param V1.sd standard error of V1
 #' @param alpha.sd standard error of A
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' OneComp_Volume_Exponent(V1=8,alpha=0.5,V1.sd=0.01,alpha.sd=0.001)
 #'
 OneComp_Volume_Exponent<-function(V1,alpha,V1.sd=NA,alpha.sd=NA,
-  covar=c(V1alpha=NA)){
+  covar=c(V1alpha=NA),...){
   if(is.na(covar[1])) covar<-0
   V1.var = (V1.sd)^2
   alpha.var = (alpha.sd)^2

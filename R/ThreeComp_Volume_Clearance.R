@@ -6,7 +6,7 @@
 #'  V1.sd=NA,V2.sd=NA,V3.sd=NA, Cl1.sd=NA,Cl2.sd=NA,Cl3.sd=NA,
 #'  covar=c(V1V2=NA,V1V3=NA,V1Cl1=NA,
 #'    V1Cl2=NA,V1Cl3=NA,V2V3=NA,V2Cl1=NA,V2Cl2=NA,V2Cl3=NA,
-#'    V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA))
+#'    V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param V2 The volume of distribution of compartment 2
 #' @param V3 The volume of distribution of compartment 3
@@ -21,7 +21,7 @@
 #' @param Cl3.sd standard error of Cl3
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' ThreeComp_Volume_Clearance(V1=10,V2=100,V3=1000,Cl1=3,Cl2=2,Cl3=1,
@@ -31,7 +31,7 @@ ThreeComp_Volume_Clearance<-function(V1,V2,V3,Cl1,Cl2,Cl3,
   V1.sd=NA,V2.sd=NA,V3.sd=NA,Cl1.sd=NA,Cl2.sd=NA,Cl3.sd=NA,
   covar=c(V1V2=NA,V1V3=NA,V1Cl1=NA,
     V1Cl2=NA,V1Cl3=NA,V2V3=NA,V2Cl1=NA,V2Cl2=NA,V2Cl3=NA,
-    V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA)){
+    V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA),...){
   if(is.na(covar[1])) covar<-rep(0,15)
   V1.var <- (V1.sd)^2;    V2.var <- (V2.sd)^2;   V3.var <- (V3.sd)^2
   Cl1.var <- (Cl1.sd)^2;  Cl2.var <- (Cl2.sd)^2; Cl3.var <- (Cl3.sd)^2

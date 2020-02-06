@@ -9,7 +9,7 @@
 #'  covar=c(V1alpha=NA,V1beta=NA,V1gamma=NA,V1k21=NA,V1k31=NA,
 #'    alphabeta=NA,alphagamma=NA,alphak21=NA,alphak31=NA,
 #'    betagamma=NA,betak21=NA,betak31=NA,gammak21=NA,gammak31=NA,
-#'    k21k31=NA))
+#'    k21k31=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param k21 transfer rate constants from compartment 2 to compartment 1
 #' @param k31 transfer rate constants from compartment 3 to compartment 1
@@ -25,7 +25,7 @@
 #' @param gamma.sd standard error of gamma
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' ThreeComp_Volume_Exponent(V1=10,alpha=0.6, beta=0.013, gamma=0.00074,
@@ -37,7 +37,7 @@ ThreeComp_Volume_Exponent<-function(V1,alpha,beta,gamma,k21,k31,
   covar=c(V1alpha=NA,V1beta=NA,V1gamma=NA,V1k21=NA,V1k31=NA,
     alphabeta=NA,alphagamma=NA,alphak21=NA,alphak31=NA,
     betagamma=NA,betak21=NA,betak31=NA,gammak21=NA,gammak31=NA,
-    k21k31=NA)){
+    k21k31=NA),...){
   if(is.na(covar[1])) covar<-rep(0,15)
   V1.var = (V1.sd)^2;       alpha.var = (alpha.sd)^2;  beta.var = (beta.sd)^2;
   gamma.var = (gamma.sd)^2; k21.var = (k21.sd)^2;      k31.var = (k31.sd)^2;

@@ -8,7 +8,7 @@ ThreeComp_Volume_Clearance_HalfLife(V1,Vd,Cl1,t_alpha,t_beta,t_gamma,
  V1.sd=NA,Vd.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,t_beta.sd=NA,t_gamma.sd=NA,
  covar=c(V1Vd=NA,V1Cl1=NA,V1talpha=NA,V1tbeta=NA,V1tgamma=NA,VdCl1=NA,
    Vdtalpha=NA,Vdtbeta=NA,Vdtgamma=NA,Cl1talpha=NA,Cl1tbeta=NA,
-   Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA))
+   Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -49,5 +49,5 @@ t_alpha=1.142,t_beta=52.2,t_gamma=931, V1.sd=0.01,Vd.sd=20,Cl1.sd=0.01,
 t_alpha.sd=0.002,t_beta.sd=0.5,t_gamma.sd=5.6)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

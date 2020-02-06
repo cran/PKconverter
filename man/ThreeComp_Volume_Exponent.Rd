@@ -9,7 +9,7 @@ ThreeComp_Volume_Exponent(V1,alpha,beta,gamma,k21,k31,
  covar=c(V1alpha=NA,V1beta=NA,V1gamma=NA,V1k21=NA,V1k31=NA,
    alphabeta=NA,alphagamma=NA,alphak21=NA,alphak31=NA,
    betagamma=NA,betak21=NA,betak31=NA,gammak21=NA,gammak31=NA,
-   k21k31=NA))
+   k21k31=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -52,5 +52,5 @@ ThreeComp_Volume_Exponent(V1=10,alpha=0.6, beta=0.013, gamma=0.00074,
    gamma.sd=0.000002, k21.sd=0.0006,k31.sd=0.0000005)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

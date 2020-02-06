@@ -4,21 +4,21 @@
 #' half-life (t_alpha)
 #'
 #' @usage OneComp_Volume_Clearance_HalfLife(Cl1,t_alpha,
-#'          Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA))
+#'          Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA),...)
 #' @param Cl1 Clearance from compartment 1
 #' @param t_alpha half life of compartment 1
 #' @param Cl1.sd standard error of Cl1
 #' @param t_alpha.sd standard error of t_alpha
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' OneComp_Volume_Clearance_HalfLife(Cl1=4,t_alpha=0.568,
 #'       Cl1.sd=0.01,t_alpha.sd=0.0003)
 
 OneComp_Volume_Clearance_HalfLife<-function(Cl1,t_alpha,
-  Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA)){
+  Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA),...){
   if(is.na(covar[1])) covar<-0
   Cl1.var = (Cl1.sd)^2
   t_alpha.var = (t_alpha.sd)^2

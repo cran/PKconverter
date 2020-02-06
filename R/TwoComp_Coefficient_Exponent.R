@@ -5,7 +5,7 @@
 #'
 #' @usage TwoComp_Coefficient_Exponent(A,B,alpha,beta,
 #'  A.sd=NA,B.sd=NA,alpha.sd=NA,beta.sd=NA,
-#'  covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA))
+#'  covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA),...)
 #' @param A parameter in one compartment model "Aexp(-alpha)"
 #' @param B parameter in two compartment model "Aexp(-alpha)+Bexp(-beta)"
 #' @param alpha parameter in one compartment model "Aexp(-alpha)"
@@ -16,7 +16,7 @@
 #' @param beta.sd standard error of beta
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' TwoComp_Coefficient_Exponent(A=0.196,B=0.0036,alpha=1.221,beta=0.0287,
@@ -24,7 +24,7 @@
 
 TwoComp_Coefficient_Exponent<-function(A,B,alpha,beta,
   A.sd=NA,B.sd=NA,alpha.sd=NA,beta.sd=NA,
-  covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA)){
+  covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA),...){
   if(is.na(covar[1])) covar<-rep(0,6)
   A.var = (A.sd)^2;             B.var = (B.sd)^2
   alpha.var = (alpha.sd)^2;     beta.var = (beta.sd)^2

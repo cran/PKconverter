@@ -3,20 +3,20 @@
 #' Calculate pharmacokinetic parameters with parameters (A and alpha)
 #' in one compartment model "Aexp(-alpha)"
 #' @usage OneComp_Coefficient_Exponent(A,alpha,A.sd=NA,alpha.sd=NA,
-#'            covar=c(Aalpha=NA))
+#'            covar=c(Aalpha=NA),...)
 #' @param A parameter in one compartment model "Aexp(-alpha)"
 #' @param alpha parameter in one compartment model "Aexp(-alpha)"
 #' @param A.sd standard error of A
 #' @param alpha.sd standard error of alpha
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' OneComp_Coefficient_Exponent(A=0.125,alpha=0.5,A.sd=0.002,alpha.sd=0.009)
 
 OneComp_Coefficient_Exponent<-function(A,alpha,A.sd=NA,
-  alpha.sd=NA,covar=c(Aalpha=NA)){
+  alpha.sd=NA,covar=c(Aalpha=NA),...){
 
   if(is.na(covar[1])) covar<-0
   A.var = (A.sd)^2

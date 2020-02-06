@@ -8,7 +8,7 @@
 #'    B.sd=NA,C.sd=NA,alpha.sd=NA,beta.sd=NA,gamma.sd=NA,
 #'    covar=c(AB=NA,AC=NA,Aalpha=NA,Abeta=NA,Agamma=NA,BC=NA,Balpha=NA,
 #'    Bbeta=NA,Bgamma=NA,Calpha=NA,Cbeta=NA,Cgamma=NA,alphabeta=NA,
-#'    alphagamma=NA,betagamma=NA))
+#'    alphagamma=NA,betagamma=NA),...)
 #' @param A parameter in one compartment model "Aexp(-alpha)"
 #' @param B parameter in two compartment model "Aexp(-alpha)+Bexp(-beta)"
 #' @param C parameter in three compartment model
@@ -25,7 +25,7 @@
 #' @param gamma.sd standard error of gamma
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' ThreeComp_Coefficient_Exponent(A=12.2,B=3.76,C=1.44,
@@ -37,7 +37,7 @@ ThreeComp_Coefficient_Exponent<-function(A,B,C,alpha,beta,gamma,A.sd=NA,
     B.sd=NA,C.sd=NA,alpha.sd=NA,beta.sd=NA,gamma.sd=NA,
     covar=c(AB=NA,AC=NA,Aalpha=NA,Abeta=NA,Agamma=NA,BC=NA,Balpha=NA,
     Bbeta=NA,Bgamma=NA,Calpha=NA,Cbeta=NA,Cgamma=NA,alphabeta=NA,
-    alphagamma=NA,betagamma=NA)){
+    alphagamma=NA,betagamma=NA),...){
   if(is.na(covar[1])) covar<-rep(0,15)
   A.var = (A.sd)^2;           B.var = (B.sd)^2;        C.var = (C.sd)^2
   alpha.var = (alpha.sd)^2;   beta.var = (beta.sd)^2;  gamma.var = (gamma.sd)^2

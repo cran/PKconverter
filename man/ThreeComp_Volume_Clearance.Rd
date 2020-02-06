@@ -8,7 +8,7 @@ ThreeComp_Volume_Clearance(V1,V2,V3,Cl1,Cl2,Cl3,
  V1.sd=NA,V2.sd=NA,V3.sd=NA, Cl1.sd=NA,Cl2.sd=NA,Cl3.sd=NA,
  covar=c(V1V2=NA,V1V3=NA,V1Cl1=NA,
    V1Cl2=NA,V1Cl3=NA,V2V3=NA,V2Cl1=NA,V2Cl2=NA,V2Cl3=NA,
-   V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA))
+   V3Cl1=NA,V3Cl2=NA,V3Cl3=NA,Cl1Cl2=NA,Cl1Cl3=NA,Cl2Cl3=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -49,5 +49,5 @@ ThreeComp_Volume_Clearance(V1=10,V2=100,V3=1000,Cl1=3,Cl2=2,Cl3=1,
 
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

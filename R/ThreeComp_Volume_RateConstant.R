@@ -7,7 +7,7 @@
 #'  V1.sd=NA,k10.sd=NA,k12.sd=NA,
 #'  k13.sd=NA,k21.sd=NA,k31.sd=NA,covar=c(V1k10=NA,V1k12=NA,V1k13=NA,
 #'    V1k21=NA,V1k31=NA,k10k12=NA,k10k13=NA,k10k21=NA,k10k31=NA,
-#'    k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA))
+#'    k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param k10 elimination rate constant
 #' @param k12 transfer rate constants from compartment 1 to compartment 2
@@ -22,7 +22,7 @@
 #' @param k31.sd standard error of k31
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' ThreeComp_Volume_RateConstant(V1=10,k10=0.3,k12=0.2,k13=0.1,k21=0.02,
@@ -33,7 +33,7 @@ ThreeComp_Volume_RateConstant<-function(V1,k10,k12,k13,k21,k31,
     V1.sd=NA,k10.sd=NA,k12.sd=NA,
     k13.sd=NA,k21.sd=NA,k31.sd=NA,covar=c(V1k10=NA,V1k12=NA,V1k13=NA,
     V1k21=NA,V1k31=NA,k10k12=NA,k10k13=NA,k10k21=NA,k10k31=NA,
-    k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA)){
+    k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA),...){
   if(is.na(covar[1])) covar<-rep(0,15)
   V1.var <- (V1.sd)^2;
   k10.var <- (k10.sd)^2;  k12.var <- (k12.sd)^2;  k13.var <- (k13.sd)^2

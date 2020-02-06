@@ -8,7 +8,7 @@ ThreeComp_Volume_RateConstant(V1,k10,k12,k13,k21,k31,
  V1.sd=NA,k10.sd=NA,k12.sd=NA,
  k13.sd=NA,k21.sd=NA,k31.sd=NA,covar=c(V1k10=NA,V1k12=NA,V1k13=NA,
    V1k21=NA,V1k31=NA,k10k12=NA,k10k13=NA,k10k21=NA,k10k31=NA,
-   k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA))
+   k12k13=NA,k12k21=NA,k12k31=NA,k13k21=NA,k13k31=NA,k21k31=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -50,5 +50,5 @@ ThreeComp_Volume_RateConstant(V1=10,k10=0.3,k12=0.2,k13=0.1,k21=0.02,
          k13.sd=0.0005,k21.sd=0.0005,k31.sd=0.000005)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

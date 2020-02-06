@@ -7,7 +7,7 @@
 #'  V1.sd=NA,Vd.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,t_beta.sd=NA,t_gamma.sd=NA,
 #'  covar=c(V1Vd=NA,V1Cl1=NA,V1talpha=NA,V1tbeta=NA,V1tgamma=NA,VdCl1=NA,
 #'    Vdtalpha=NA,Vdtbeta=NA,Vdtgamma=NA,Cl1talpha=NA,Cl1tbeta=NA,
-#'    Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA))
+#'    Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA),...)
 #' @param Vd Total volume of distributions
 #' @param V1 The volume of distribution of compartment 1
 #' @param Cl1 Clearance from compartment 1
@@ -22,7 +22,7 @@
 #' @param t_gamma.sd standard error of t_gamma
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' ThreeComp_Volume_Clearance_HalfLife(V1=5,Vd=1110,Cl1=3,
@@ -33,7 +33,7 @@ ThreeComp_Volume_Clearance_HalfLife<-function(V1,Vd,Cl1,t_alpha,t_beta,t_gamma,
   V1.sd=NA,Vd.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,t_beta.sd=NA,t_gamma.sd=NA,
   covar=c(V1Vd=NA,V1Cl1=NA,V1talpha=NA,V1tbeta=NA,V1tgamma=NA,VdCl1=NA,
     Vdtalpha=NA,Vdtbeta=NA,Vdtgamma=NA,Cl1talpha=NA,Cl1tbeta=NA,
-    Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA)){
+    Cl1tgamma=NA,talphatbeta=NA,talphatgamma=NA,tbetatgamma=NA),...){
   if(is.na(covar[1])) covar<-rep(0,15)
   V1.var = (V1.sd)^2;                  Vd.var = (Vd.sd)^2
   Cl1.var = (Cl1.sd)^2;                t_alpha.var = (t_alpha.sd)^2;

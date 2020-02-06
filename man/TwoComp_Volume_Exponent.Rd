@@ -6,7 +6,8 @@
 \usage{
 TwoComp_Volume_Exponent(V1,alpha,beta,k21,V1.sd=NA,
  alpha.sd=NA,beta.sd=NA,k21.sd=NA,
- covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,alphabeta=NA,alphak21=NA,betak21=NA))
+ covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,alphabeta=NA,
+ alphak21=NA,betak21=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -39,5 +40,5 @@ TwoComp_Volume_Exponent(V1=5,alpha=1.221, beta=0.029, k21=0.05,
 V1.sd=0.01,alpha.sd=0.01,beta.sd=0.00005,k21.sd=0.0006)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

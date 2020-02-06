@@ -5,7 +5,7 @@
 \title{Convert pharmacokinetic parameters for one compartment model}
 \usage{
 OneComp_Volume_Exponent(V1,alpha,V1.sd=NA,alpha.sd=NA,
-         covar=c(V1alpha=NA))
+         covar=c(V1alpha=NA),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -29,5 +29,5 @@ OneComp_Volume_Exponent(V1=8,alpha=0.5,V1.sd=0.01,alpha.sd=0.001)
 
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

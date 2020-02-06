@@ -7,7 +7,7 @@
 TwoComp_Volume_Clearance(V1,V2,Cl1,Cl2,
                   V1.sd=NA,V2.sd=NA,Cl1.sd=NA,Cl2.sd=NA,
                   covar=c(V1V2=0,V1Cl1=0,V1Cl2=0,
-                    V2Cl1=0,V2Cl2=0,Cl1Cl2=0))
+                    V2Cl1=0,V2Cl2=0,Cl1Cl2=0),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -39,5 +39,5 @@ TwoComp_Volume_Clearance(V1=5,V2=50,Cl1=3.5,Cl2=2.5,
          V1.sd=0.01,V2.sd=0.1,Cl1.sd=0.01,Cl2.sd=0.01)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

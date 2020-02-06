@@ -5,7 +5,7 @@
 \title{Convert pharmacokinetic parameters for one compartment model}
 \usage{
 OneComp_Coefficient_Exponent(A,alpha,A.sd=NA,alpha.sd=NA,
-           covar=c(Aalpha=NA))
+           covar=c(Aalpha=NA),...)
 }
 \arguments{
 \item{A}{parameter in one compartment model "Aexp(-alpha)"}
@@ -28,5 +28,5 @@ in one compartment model "Aexp(-alpha)"
 OneComp_Coefficient_Exponent(A=0.125,alpha=0.5,A.sd=0.002,alpha.sd=0.009)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

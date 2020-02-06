@@ -2,14 +2,15 @@
 #'
 #' Calculate pharmacokinetic parameters with volume of distribution (V1) and
 #' clearance (Cl1)
-#' @usage OneComp_Volume_Clearance(V1,Cl1,V1.sd=NA,Cl1.sd=NA,covar=c(V1Cl1=NA))
+#' @usage OneComp_Volume_Clearance(V1,Cl1,V1.sd=NA,Cl1.sd=NA,
+#'         covar=c(V1Cl1=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param Cl1 Clearance from compartment 1
 #' @param V1.sd standard error of V1
 #' @param Cl1.sd standard error of Cl1
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @references Gabrielsson and Weiner(2006) Pharmacokinetic and
 #'             Pharmacodynamic Data Analysis: Concepts and Applications,
 #'             Swedish Academy of Pharmaceutical Sciences.
@@ -17,7 +18,8 @@
 #' @examples
 #' OneComp_Volume_Clearance(V1=8,Cl1=4,V1.sd=0.01,Cl1.sd=0.01)
 
-OneComp_Volume_Clearance<-function(V1,Cl1,V1.sd=NA,Cl1.sd=NA,covar=c(V1Cl1=NA)){
+OneComp_Volume_Clearance<-function(V1,Cl1,V1.sd=NA,Cl1.sd=NA,
+                                   covar=c(V1Cl1=NA),...){
   if(is.na(covar[1])) covar<-0
   Vdss = V1
   k10 = Cl1/V1

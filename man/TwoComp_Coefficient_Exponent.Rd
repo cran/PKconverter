@@ -6,7 +6,7 @@
 \usage{
 TwoComp_Coefficient_Exponent(A,B,alpha,beta,
  A.sd=NA,B.sd=NA,alpha.sd=NA,beta.sd=NA,
- covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA))
+ covar=c(AB=NA,Aalpha=NA,Abeta=NA,Balpha=NA,Bbeta=NA,alphabeta=NA),...)
 }
 \arguments{
 \item{A}{parameter in one compartment model "Aexp(-alpha)"}
@@ -38,5 +38,5 @@ TwoComp_Coefficient_Exponent(A=0.196,B=0.0036,alpha=1.221,beta=0.0287,
 A.sd=0.002,B.sd=0.00005,alpha.sd=0.09,beta.sd=0.0006)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

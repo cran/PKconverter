@@ -6,7 +6,7 @@
 #' @usage TwoComp_Volume_Clearance_HalfLife(V1,Cl1,t_alpha,t_beta,
 #'  V1.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,
 #'  t_beta.sd=NA,covar=c(V1Cl1=NA,V1talpha=NA,V1tbeta=NA,Cl1talpha=NA,
-#'    Cl1tbeta=NA,talphatbeta=NA))
+#'    Cl1tbeta=NA,talphatbeta=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param Cl1 Clearance from compartment 1
 #' @param t_alpha half life of compartment 1
@@ -17,7 +17,7 @@
 #' @param t_beta.sd standard error of t_beta
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' TwoComp_Volume_Clearance_HalfLife(V1=5,Cl1=3.5,t_alpha=0.568,t_beta=24.2,
@@ -25,7 +25,7 @@
 TwoComp_Volume_Clearance_HalfLife<-function(V1,Cl1,t_alpha,t_beta,
   V1.sd=NA,Cl1.sd=NA,t_alpha.sd=NA,
   t_beta.sd=NA,covar=c(V1Cl1=NA,V1talpha=NA,V1tbeta=NA,Cl1talpha=NA,
-    Cl1tbeta=NA,talphatbeta=NA)){
+    Cl1tbeta=NA,talphatbeta=NA),...){
   if(is.na(covar[1])) covar<-rep(0,6)
   V1.var = (V1.sd)^2;                  Cl1.var = (Cl1.sd)^2
   t_alpha.var = (t_alpha.sd)^2;        t_beta.var = (t_beta.sd)^2

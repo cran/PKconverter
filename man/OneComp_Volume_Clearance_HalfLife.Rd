@@ -5,7 +5,7 @@
 \title{Convert pharmacokinetic parameters for one compartment model}
 \usage{
 OneComp_Volume_Clearance_HalfLife(Cl1,t_alpha,
-         Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA))
+         Cl1.sd=NA,t_alpha.sd=NA,covar=c(Cl1talpha=NA),...)
 }
 \arguments{
 \item{Cl1}{Clearance from compartment 1}
@@ -29,5 +29,5 @@ OneComp_Volume_Clearance_HalfLife(Cl1=4,t_alpha=0.568,
       Cl1.sd=0.01,t_alpha.sd=0.0003)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

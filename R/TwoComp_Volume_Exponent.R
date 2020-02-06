@@ -5,7 +5,8 @@
 #' in the model "Aexp(-alpha)+Bexp(-beta)"
 #' @usage TwoComp_Volume_Exponent(V1,alpha,beta,k21,V1.sd=NA,
 #'  alpha.sd=NA,beta.sd=NA,k21.sd=NA,
-#'  covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,alphabeta=NA,alphak21=NA,betak21=NA))
+#'  covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,alphabeta=NA,
+#'  alphak21=NA,betak21=NA),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param alpha parameter in one compartment model "Aexp(-alpha)"
 #' @param beta parameter in two compartment model "Aexp(-alpha)+Bexp(-beta)"
@@ -16,7 +17,7 @@
 #' @param k21.sd standard error of k21
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' TwoComp_Volume_Exponent(V1=5,alpha=1.221, beta=0.029, k21=0.05,
@@ -25,7 +26,8 @@
 
 TwoComp_Volume_Exponent<-function(V1,alpha,beta,k21,V1.sd=NA,alpha.sd=NA,
   beta.sd=NA,k21.sd=NA,
-  covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,alphabeta=NA,alphak21=NA,betak21=NA)){
+  covar=c(V1alpha=NA,V1beta=NA,V1k21=NA,
+          alphabeta=NA,alphak21=NA,betak21=NA),...){
   if(is.na(covar[1])) covar<-rep(0,6)
   V1.var = (V1.sd)^2;            alpha.var = (alpha.sd)^2
   beta.var = (beta.sd)^2;        k21.var = (k21.sd)^2

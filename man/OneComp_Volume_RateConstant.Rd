@@ -5,7 +5,7 @@
 \title{Convert pharmacokinetic parameters for one compartment model}
 \usage{
 OneComp_Volume_RateConstant(V1,k10,
-             V1.sd=NA,k10.sd=NA,covar=c(V1k10=0))
+             V1.sd=NA,k10.sd=NA,covar=c(V1k10=0),...)
 }
 \arguments{
 \item{V1}{The volume of distribution of compartment 1}
@@ -29,5 +29,5 @@ OneComp_Volume_RateConstant(V1=8,k10=0.5,V1.sd=0.01,k10.sd=0.002)
 
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }

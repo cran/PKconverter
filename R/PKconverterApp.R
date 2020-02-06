@@ -8,8 +8,6 @@
 #' considered, but only some of parameters are used in the model.
 #' Therefore,we need to convert the estimated parameters to the other
 #' parameters after fitting the specific pharmacokinetic model.
-#' For Shiny App on the web, visit
-#' \href{https://ek-lee.shinyapps.io/PKconverter/}{PKconverter shiny app},
 #' @usage PKconverterApp()
 #' @examples
 #' #PKconverterApp()

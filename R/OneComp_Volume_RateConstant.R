@@ -3,20 +3,20 @@
 #' Calculate pharmacokinetic parameters with volume of distribution (V1) and
 #' elimination rate constant (k10)
 #' @usage OneComp_Volume_RateConstant(V1,k10,
-#'              V1.sd=NA,k10.sd=NA,covar=c(V1k10=0))
+#'              V1.sd=NA,k10.sd=NA,covar=c(V1k10=0),...)
 #' @param V1 The volume of distribution of compartment 1
 #' @param k10 elimination rate constant
 #' @param V1.sd standard error of V1
 #' @param k10.sd standard error of k10
 #' @param covar covariances among parameters
 #' @param ... arguments to be passed to methods
-#' @references \url{www.nonmemcourse.com/convert.xls}
+#' @references \url{http://www.nonmemcourse.com/convert.xls}
 #' @export
 #' @examples
 #' OneComp_Volume_RateConstant(V1=8,k10=0.5,V1.sd=0.01,k10.sd=0.002)
 #'
 OneComp_Volume_RateConstant<-function(V1,k10,
-    V1.sd=NA,k10.sd=NA,covar=c(V1k10=0)){
+    V1.sd=NA,k10.sd=NA,covar=c(V1k10=0),...){
   if(is.na(covar[1])) covar<-0
   V1.var = (V1.sd)^2
   k10.var = (k10.sd)^2

@@ -8,7 +8,7 @@ ThreeComp_Coefficient_Exponent(A,B,C,alpha,beta,gamma,A.sd=NA,
    B.sd=NA,C.sd=NA,alpha.sd=NA,beta.sd=NA,gamma.sd=NA,
    covar=c(AB=NA,AC=NA,Aalpha=NA,Abeta=NA,Agamma=NA,BC=NA,Balpha=NA,
    Bbeta=NA,Bgamma=NA,Calpha=NA,Cbeta=NA,Cgamma=NA,alphabeta=NA,
-   alphagamma=NA,betagamma=NA))
+   alphagamma=NA,betagamma=NA),...)
 }
 \arguments{
 \item{A}{parameter in one compartment model "Aexp(-alpha)"}
@@ -52,5 +52,5 @@ alpha=0.870,beta=0.12,gamma=0.013, A.sd=0.2,B.sd=0.005,C.sd=0.0005,
 alpha.sd=0.009,beta.sd=0.006,gamma.sd=0.00005)
 }
 \references{
-\url{www.nonmemcourse.com/convert.xls}
+\url{http://www.nonmemcourse.com/convert.xls}
 }
